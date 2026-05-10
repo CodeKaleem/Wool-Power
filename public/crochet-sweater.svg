@@ -1,0 +1,7 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#F7F5FF"/>
+  <path d="M470 250L560 210H640L730 250L820 330L760 410L700 360V670H500V360L440 410L380 330L470 250Z" fill="#B34D6A"/>
+  <path d="M560 210L600 280L640 210" stroke="#FFE7EE" stroke-width="16"/>
+  <path d="M500 450H700M500 520H700M500 590H700" stroke="#D8899D" stroke-width="10"/>
+  <text x="600" y="760" text-anchor="middle" font-family="Arial, sans-serif" font-size="56" font-weight="700" fill="#532D39">Vintage Pearl Sweater</text>
+</svg>

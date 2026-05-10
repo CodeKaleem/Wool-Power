@@ -1,0 +1,13 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF3F7"/>
+      <stop offset="1" stop-color="#F3F7FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect x="360" y="260" width="480" height="360" rx="48" fill="#532D39"/>
+  <path d="M450 290C450 210 514 150 594 150H606C686 150 750 210 750 290V330H700V290C700 237 659 196 606 196H594C541 196 500 237 500 290V330H450V290Z" fill="#FF8EA3"/>
+  <path d="M400 360H800" stroke="#FFB7C6" stroke-width="16"/>
+  <text x="600" y="740" text-anchor="middle" font-family="Arial, sans-serif" font-size="56" font-weight="700" fill="#532D39">Rose Blossom Bag</text>
+</svg>

@@ -1,0 +1,118 @@
+.cardWrapper {
+    perspective: 1000px;
+}
+
+.card {
+    background: var(--primary-white);
+    border: 1px solid var(--border-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px) rotateX(4deg) rotateY(-2deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1.2;
+    overflow: hidden;
+}
+
+.image {
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover .image {
+    transform: scale(1.1);
+}
+
+.categoryBadge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary-red-pink);
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transform: translateZ(20px);
+}
+
+.info {
+    padding: 1.5rem;
+    transform: translateZ(30px);
+}
+
+.name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.price {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+}
+
+.sizeSelector {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.sizeSelector select {
+    padding: 0.3rem 0.6rem;
+    border: 1px solid var(--border-gray);
+    border-radius: 4px;
+    background: none;
+    font-size: 0.85rem;
+    outline: none;
+}
+
+.addButton {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--primary-red-pink);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    transform: translateZ(0); /* Hardware acceleration */
+}
+
+.addButton:hover {
+    background: var(--accent-pink);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 15px rgba(255, 60, 95, 0.3), 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.addButton:active {
+    transform: translateY(2px) scale(0.97);
+    box-shadow: inset 0 4px 8px rgba(0,0,0,0.2), 0 2px 4px rgba(0,0,0,0.05);
+}

@@ -1,0 +1,223 @@
+.container {
+    display: flex;
+    min-height: calc(100vh - 80px);
+    background: var(--soft-gray);
+}
+
+.sidebar {
+    width: 260px;
+    background: #fff;
+    border-right: 1px solid var(--border-gray);
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebarHeader {
+    padding: 0 2rem 2rem;
+    border-bottom: 1px solid var(--border-gray);
+    margin-bottom: 1rem;
+}
+
+.sidebarHeader h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #000;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.navItem {
+    padding: 1rem 2rem;
+    text-align: left;
+    background: none;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.navItem:hover {
+    background: var(--soft-gray);
+    color: #000;
+}
+
+.active {
+    background: var(--soft-pink);
+    color: var(--primary-red-pink);
+    border-left-color: var(--primary-red-pink);
+}
+
+/* Content Area */
+.content {
+    flex: 1;
+    padding: 3rem;
+}
+
+.section {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--border-gray);
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000;
+}
+
+.searchBar input {
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--border-gray);
+    border-radius: 4px;
+    width: 300px;
+    font-size: 0.9rem;
+}
+
+.tableWrapper {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 2px solid var(--border-gray);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #888;
+    letter-spacing: 0.05rem;
+}
+
+.table td {
+    padding: 1.2rem 1rem;
+    border-bottom: 1px solid var(--border-gray);
+    font-size: 0.95rem;
+}
+
+.statusBadge {
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.online {
+    background: #e6f7ed;
+    color: #1a8754;
+}
+
+.offline {
+    background: #f8f9fa;
+    color: #6c757d;
+}
+
+.deleteBtn {
+    background: none;
+    border: 1px solid #ff4d4d;
+    color: #ff4d4d;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.deleteBtn:hover:not(:disabled) {
+    background: #ff4d4d;
+    color: #fff;
+}
+
+.deleteBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: #ccc;
+    color: #ccc;
+}
+
+.editBtn {
+    background: none;
+    border: 1px solid var(--primary-red-pink);
+    color: var(--primary-red-pink);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.editBtn:hover {
+    background: var(--primary-red-pink);
+    color: #fff;
+}
+
+.addBtn {
+    padding: 0.8rem 1.5rem;
+    background: var(--primary-red-pink);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.addBtn:hover {
+    background: #e63554;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 60, 95, 0.2);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 1rem;
+    }
+
+    .sidebarHeader {
+        display: none;
+    }
+
+    .nav {
+        flex-direction: row;
+    }
+
+    .navItem {
+        border-left: none;
+        border-bottom: 3px solid transparent;
+        padding: 0.5rem 1.5rem;
+        white-space: nowrap;
+    }
+
+    .active {
+        border-bottom-color: var(--primary-red-pink);
+    }
+}

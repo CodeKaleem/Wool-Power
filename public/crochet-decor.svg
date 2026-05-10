@@ -1,0 +1,10 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#F6FAFF"/>
+  <rect x="560" y="160" width="80" height="80" rx="24" fill="#532D39"/>
+  <path d="M600 240V620" stroke="#532D39" stroke-width="14" stroke-linecap="round"/>
+  <path d="M600 300L460 620M600 300L740 620" stroke="#B34D6A" stroke-width="10" stroke-linecap="round"/>
+  <path d="M460 620H740" stroke="#532D39" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="460" cy="620" r="18" fill="#FF3C5F"/>
+  <circle cx="740" cy="620" r="18" fill="#FF3C5F"/>
+  <text x="600" y="760" text-anchor="middle" font-family="Arial, sans-serif" font-size="56" font-weight="700" fill="#532D39">Boho Wall Hanging</text>
+</svg>

@@ -1,0 +1,127 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: var(--primary-white);
+    border-bottom: 1px solid var(--border-gray);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.brandWrap {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.logo {
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.02);
+}
+
+.nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.navButton,
+.adminButton,
+.cartLink {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease, color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    transform: translateZ(0);
+}
+
+.navButton:active,
+.adminButton:active,
+.cartLink:active {
+    transform: translateY(2px) scale(0.96);
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.cartLink {
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.cartLink span {
+    color: var(--primary-red-pink);
+    font-weight: 700;
+}
+
+.cartLink:hover {
+    background: var(--soft-pink);
+}
+
+.navButton {
+    color: #000;
+    border: 1px solid transparent;
+}
+
+.navButton:hover {
+    background: var(--soft-gray);
+}
+
+.adminButton {
+    color: #000;
+    border: 1px solid #000;
+}
+
+.adminButton:hover {
+    background: #000;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 70px;
+        padding: 0 1rem;
+    }
+
+    .logo {
+        width: 140px;
+        height: auto;
+    }
+
+    .nav {
+        gap: 0.5rem;
+    }
+
+    .navButton,
+    .adminButton {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}

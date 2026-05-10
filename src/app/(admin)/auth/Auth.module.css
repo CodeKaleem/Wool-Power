@@ -1,0 +1,240 @@
+.container {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--soft-gray);
+    padding: 2rem;
+}
+
+.authCard {
+    background: var(--primary-white);
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    max-width: 500px;
+    width: 100%;
+    border: 1px solid var(--border-gray);
+}
+
+.tabs {
+    display: flex;
+    background: var(--soft-gray);
+    padding: 0.3rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.tab {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    background: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    color: #666;
+}
+
+.strand1 {
+    border-color: var(--primary-red-pink);
+    transform: rotateY(0deg);
+}
+
+.strand2 {
+    border-color: var(--accent-gold);
+    transform: rotateY(60deg);
+}
+
+.strand3 {
+    border-color: var(--primary-red-pink);
+    transform: rotateY(120deg);
+}
+
+.activeTab {
+    background: var(--primary-red-pink);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.core {
+    position: absolute;
+    inset: 20px;
+    background: var(--primary-red-pink);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 60, 95, 0.3);
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.inputGroup {
+    position: relative;
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    padding: 1.2rem 0 0.5rem;
+    border: none;
+    border-bottom: 2px solid var(--border-gray);
+    background: none;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus {
+    border-color: var(--primary-red-pink);
+}
+
+.label {
+    position: absolute;
+    top: 1.2rem;
+    left: 0;
+    color: #999;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input:focus+.label,
+.input:not(:placeholder-shown)+.label {
+    top: 0;
+    font-size: 0.8rem;
+    color: var(--primary-red-pink);
+    font-weight: 600;
+}
+
+.toggleVisibility {
+    position: absolute;
+    right: 0;
+    top: 1.2rem;
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.extraActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.rememberMe {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+    cursor: pointer;
+}
+
+.forgotPassword {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.passwordStrength {
+    background: #f8f9fa;
+    padding: 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.strengthBar {
+    height: 4px;
+    background: #34a853;
+    width: 80%;
+    border-radius: 2px;
+}
+
+.submitButton {
+    padding: 1rem;
+    background: var(--primary-red-pink);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 1rem;
+}
+
+.submitButton:hover {
+    background: var(--accent-pink);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border-gray);
+}
+
+.divider span {
+    color: #999;
+    font-size: 0.85rem;
+}
+
+.googleButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    background: #fff;
+    border: 1px solid var(--border-gray);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #3c4043;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.googleButton:hover {
+    background: #f8f9fa;
+    border-color: #dadce0;
+}

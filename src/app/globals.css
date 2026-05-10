@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+:root {
+  --primary-white: #ffffff;
+  --soft-gray: #f5f5f5;
+  --text-black: #000000;
+  --border-gray: #e5e5e5;
+  --primary-maroon: #532d39;
+  /* Burgundy from reference site */
+  --primary-red-pink: #ff3c5f;
+  --accent-pink: #e62045;
+  /* Darker vibrant pink as secondary/accent for hovers */
+  --accent-gold: #d4af37;
+  --soft-pink: #fff0f3;
+  --vignette-blue: rgba(0, 150, 255, 0.05);
+  --whatsapp-green: #25d366;
+  --whatsapp-green-dark: #20ba5a;
+  --panel-shadow: 0 12px 30px rgba(50, 22, 33, 0.08);
+  /* Soft blue vignette */
+
+  --background: var(--primary-white);
+  --foreground: var(--text-black);
+  --font-body: "Manrope", system-ui, -apple-system, sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  border: 24px solid var(--vignette-blue);
+  box-shadow: inset 0 0 100px rgba(0, 150, 255, 0.06);
+  z-index: 0;
+}
+
+/* 3D Utility Classes */
+.perspective-1000 {
+  perspective: 1200px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+/* Premium Glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+}
+
+/* Flawless 3D Text Logo */
+.text-3d {
+  font-family: var(--font-display);
+  background: linear-gradient(135deg, var(--primary-maroon) 0%, var(--primary-red-pink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 
+    2px 2px 0px rgba(255,255,255,0.8),
+    4px 4px 8px rgba(0,0,0,0.15);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.text-3d:hover {
+  transform: translateZ(20px) rotateX(10deg);
+  text-shadow: 
+    3px 3px 0px rgba(255,255,255,0.9),
+    8px 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Enhanced 3D Lift */
+.lift-3d {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateZ(0);
+}
+
+.lift-3d:hover {
+  transform: translateY(-12px) translateZ(30px) rotateX(2deg);
+  box-shadow: 
+    0 30px 60px -12px rgba(0, 0, 0, 0.15),
+    0 18px 36px -18px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+.press-3d {
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.press-3d:active {
+  transform: scale(0.95) translateY(2px) translateZ(-10px);
+  box-shadow: inset 0 4px 8px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.title-sketch {
+  font-family: var(--font-display);
+  color: var(--primary-maroon);
+}
+
+/* Scrollbar Cleanup */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-gray);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
