@@ -16,7 +16,7 @@ function isAdminSubdomain(hostname: string): boolean {
   return hostname.startsWith("admin.");
 }
 
-export async function proxy(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   const hostname = getHostname(request);
   const pathname = request.nextUrl.pathname;
   const adminHost = isAdminSubdomain(hostname);

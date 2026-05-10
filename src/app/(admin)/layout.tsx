@@ -17,8 +17,12 @@ export default function AdminLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="antialiased bg-gray-50">
-      {children}
-    </main>
+    <html lang="en">
+      <body className="antialiased">
+        <main className="antialiased bg-gray-50">
+          {children}
+        </main>
+      </body>
+    </html>
   );
 }
